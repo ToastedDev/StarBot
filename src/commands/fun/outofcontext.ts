@@ -8,7 +8,7 @@ export default new Command({
   run: async ({ interaction }) => {
     await interaction.deferReply();
 
-    const res = await axios.get("https://turtlebotapi.imtca.repl.co/ooc/");
+    const res = await axios.get("https://starbotapi.imtca.repl.co/ooc/");
     const attachment = new AttachmentBuilder(res.data.url, {
       name: `${res.data.number}.png`,
     });

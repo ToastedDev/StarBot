@@ -17,7 +17,7 @@ export default new Command({
     await interaction.deferReply();
 
     const question = interaction.options.getString("question");
-    const res = await axios.get("https://turtlebotapi.imtca.repl.co/8ball/");
+    const res = await axios.get("https://starbotapi.imtca.repl.co/8ball/");
 
     interaction.followUp({
       content: `Q: ${question}\nA: ${res.data.response}`,
